@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<cameras>
+  <_><name>"Azure Kinect 4K Camera"</name>
+    <resolutions>
+      <_><res>"1280x720"</res></_>
+      <_><res>"-1x-1"</res></_></resolutions></_>
+  <_><name>"HD Pro Webcam C920"</name>
+    <resolutions>
+      <_><res>"320x240"</res></_>
+      <_><res>"640x480"</res></_>
+      <_><res>"800x600"</res></_>
+      <_><res>"960x720"</res></_>
+      <_><res>"-1x-1"</res></_></resolutions></_>
+  <_><name>"Snap Camera"</name>
+    <resolutions>
+      <_><res>"1280x720"</res></_>
+      <_><res>"-1x-1"</res></_></resolutions></_>
+  <_><name>"Unity Video Capture"</name>
+    <resolutions>
+      <_><res>"320x240"</res></_>
+      <_><res>"640x480"</res></_>
+      <_><res>"800x600"</res></_>
+      <_><res>"960x720"</res></_>
+      <_><res>"1280x720"</res></_>
+      <_><res>"1280x960"</res></_>
+      <_><res>"1920x1080"</res></_></resolutions></_></cameras>
+</opencv_storage>
