@@ -1,0 +1,174 @@
+{
+  "data": [
+    {
+      "inputName": "AU01_InnerBrowRaiser",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_01_InnerBrowRaiser",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU02_OuterBrowRaiser",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_02_OuterBrowRaiser",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU04_BrowLowerer",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_04_BrowLowerer",
+          "weight": 0.2
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU05_UpperLidRaiser",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_05_UpperLidRaiser",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU06_CheekRaiser",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_06_CheekRaiser",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU07_LidTightener",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_07_LidTightener",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU09_NoseWrinkler",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_09_NoseWrinkler",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU10_UpperLipRaiser",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_10_UpperLipRaiser",
+          "weight": 1
+        }
+      ],
+      "threshold": 1
+    },
+    {
+      "inputName": "AU12_LipCornerPuller",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_12_LipCornerPuller",
+          "weight": 1
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU14_Dimpler",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_14_Dimpler",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU15_LipCornerDepressor",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_15_LipCornerDepressor",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU17_ChinRaiser",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_17_ChinRaiser",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU20_LipStretcher",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_20_LipStretcher",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU23_LipTightener",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_23_LipTightener",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU25_LipsPart",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_25_LipsPart",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU26_JawDrop",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_26_JawDrop",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 1.0
+    },
+    {
+      "inputName": "AU45_Blink",
+      "weightedBlendshapes": [
+        {
+          "targetBlendshape": "blendShape1.AU_45_Blink",
+          "weight": 1.0
+        }
+      ],
+      "threshold": 10.0
+    }
+  ]
+}
