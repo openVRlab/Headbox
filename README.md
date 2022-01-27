@@ -3,7 +3,9 @@ Demo of the Headbox tool for blendshape creation to do facial animation on the M
 
 https://www.youtube.com/watch?v=hgUGOjc6hOg
 
-This repo is part of Volonte M, Ofek E, Jakubzak K, Bruner S, and Gonzalez-Franco M (2022) HeadBox: A Facial Blendshape Animation Toolkit for the Microsoft Rocketbox Library. IEEE VR 2022
+This repo is part of 
+Volonte M, Ofek E, Jakubzak K, Bruner S, and Gonzalez-Franco M (2022) HeadBox: A Facial Blendshape Animation Toolkit for the Microsoft Rocketbox Library. IEEE VR 2022
+
 Presented in the Open Access VR tools and libraries Workshop
 
 This unity demo has dependencies from Openface and Oculus Lipsync therefore we can't provide any particular license and it has to be looked up to the original sources.
