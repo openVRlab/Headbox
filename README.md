@@ -53,6 +53,8 @@ This part of the Unity demo needs to be used according to the Oculus SDK License
 
 ## Using the demo
 
+<img src="/Documentation/F31594C2-4BB4-49B4-8738-D95C5780EB5B.jpeg" alt="Blendshape mapping file" title="Blendshape mapping file"/>
+
 Lipsyc
 In all the Microsoft Rocketbox Avatars the first 15 blenshapes are the visemes compatible with Oculus Lipsync, which can be defined in the OculusLipSync object in the Hierarchy.
 If you change the target avatar then you need to modify the Skinned Mesh renderer inside the OVR Lip Synch Context Morph Target component.
