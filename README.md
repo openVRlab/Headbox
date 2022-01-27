@@ -55,14 +55,14 @@ This part of the Unity demo needs to be used according to the Oculus SDK License
 
 <img src="/Documentation/F31594C2-4BB4-49B4-8738-D95C5780EB5B.jpeg" alt="Blendshape mapping file" title="Blendshape mapping file"/>
 
-Lipsyc
+### Lipsyc
 In all the Microsoft Rocketbox Avatars the first 15 blenshapes are the visemes compatible with Oculus Lipsync, which can be defined in the OculusLipSync object in the Hierarchy.
 If you change the target avatar then you need to modify the Skinned Mesh renderer inside the OVR Lip Synch Context Morph Target component.
  
 <img src="/Documentation/OculusLipsync.JPG" alt="Blendshape mapping file" title="Blendshape mapping file"/>
 
-Facial Tracking 
 
+### Facial Tracking 
 
 The Headbox_Openface object in the Hierarchy contains the ZeroMQ receiver to retrieve the data from the Openface Executable and the FaceAnimator component that has the Blendshape Mapping File. This file will assign the Action Units from Openface to the blendshapes in the avatar. You need to set the avatar and head of the target avatar in this component.
 <img src="/Documentation/openface.JPG" alt="Blendshape mapping file" title="Blendshape mapping file"/>
