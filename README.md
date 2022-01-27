@@ -1,6 +1,8 @@
 # Headbox
 Demo of the Headbox tool for blendshape creation to do facial animation on the Microsoft Rocketbox.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hgUGOjc6hOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 This unity demo has dependencies from Openface and Oculus Lipsync therefore we can't provide any particular license and it has to be looked up to the original sources.
 
 ## Openface
