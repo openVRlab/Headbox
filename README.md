@@ -54,6 +54,9 @@ If you change the target avatar then you need to modify the Skinned Mesh rendere
 <img src="/Documentation/OculusLipsync.JPG" alt="Blendshape mapping file" title="Blendshape mapping file"/>
 
 Facial Tracking 
+
+<img src="/Documentation/F31594C2-4BB4-49B4-8738-D95C5780EB5B.jpeg" alt="Blendshape mapping file" title="Blendshape mapping file"/>
+
 The Headbox_Openface object in the Hierarchy contains the ZeroMQ receiver to retrieve the data from the Openface Executable and the FaceAnimator component that has the Blendshape Mapping File. This file will assign the Action Units from Openface to the blendshapes in the avatar. You need to set the avatar and head of the target avatar in this component.
 <img src="/Documentation/openface.JPG" alt="Blendshape mapping file" title="Blendshape mapping file"/>
 
