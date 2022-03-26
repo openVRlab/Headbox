@@ -92,6 +92,8 @@ Xueni Pan - Goldsmiths
 
 Fang Ma - Goldsmiths
 
+### OpenFace and ZeroMQ connection
+Ken Jakubzak - Microsoft
 
 ## Contributing
 This project welcomes contributions and suggestions. 
