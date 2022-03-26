@@ -1,0 +1,7 @@
+Input:webcam
+Camera parameters:500,500,320,240
+Output video:webcam_2022-03-03-11-58.avi
+Output json:webcam_2022-03-03-11-58.json
+Gaze: 1
+AUs: 1
+Pose: 1

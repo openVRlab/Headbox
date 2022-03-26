@@ -7,6 +7,8 @@ from collections import OrderedDict
 import glob
 from functools import partial
 
+
+
 class HeadBox():
     def __init__(self):
         #This function displays the GUI
@@ -27,13 +29,14 @@ class HeadBox():
         self.name = ''
         
         #variable that is returned after selecting the gender crowd group
-        self.getGender = ''
+        #self.getGender = ''
         
         # variable created by the getGender variables
         self.gender = ''
               
         #list of json files that will be displayed in the tool
         self.jfiles = []
+        self.expression_names = []
         
         #variable that collects all the saved json files
         self.jsonsFiles = []
@@ -67,6 +70,8 @@ class HeadBox():
  
         #fix index offset returned from maya 
         self.index2 = 0
+        
+        self.getDeltas = ''
 
     #method that creates the window    
     def buildUI(self):
@@ -84,19 +89,14 @@ class HeadBox():
         mc.button(label='Select Directory',command=self.txtPathBrowse)
         mc.text("Directory")
         self.front = mc.textField()
-        mc.separator(h=20)
-        mc.text("Choose Crowd Population")
-        mc.separator(h=20)
     
-        mc.rowLayout(nc=3,cal=(3,'center'))
-        mc.radioCollection()
-    
-        self.child = mc.radioButton(al='left', label='Child')
-        self.female = mc.radioButton(al='center', label='Female')
-        self.male = mc.radioButton(al='right', label='Male')
+        mc.rowLayout(nc=4,cal=(4,'center'))
+
+
         mc.setParent('..')
    
         mc.separator(h=20)
+        mc.text("Facial expression name")
         self.nameInput = mc.textField()
         mc.button(label='Save Facial Expression',command=self.savePose)
         mc.button(label='Refresh',command=self.refreshList)
@@ -130,94 +130,129 @@ class HeadBox():
         mc.tabLayout( self.tabs, edit=True, tabLabel=((self.child1, 'Application'), (self.child2, 'Help')) )
     
         mc.showWindow()
-
-    #function that returns the users' selected gender and group targeted to outputs the blendshapes 
-    def crowdTarget(self, *args):
-        if (mc.radioButton(self.child, query = True, select = True)):
-            self.getGender = "/child/"
-
-        if (mc.radioButton(self.female, query = True, select = True)):
-            self.getGender = "/female/"
-
-        if (mc.radioButton(self.male, query = True, select = True)):
-            self.getGender = "/male/"
-        
-        return self.getGender
-    
-    #method that refreshes the list of poses from the saved jsons files
-    def refreshList(self,*args):
-        self.path = mc.textField(self.front, q=1, text=1)
-        
-        self.gender = self.crowdTarget()        
-        
-        #self.jsons  = self.path + self.gender
-        self.dir = self.path + self.gender
-        
-        mc.textScrollList(self.s, e=True, removeAll=True)
-        
-        self.jsonsFiles = glob.glob(self.dir + '/*.json')
-        
-        #clear list of json files displayed in the GUI
-        del self.jfiles[:]
-         
-        #load the json files again 
-        for filename in self.jsonsFiles:
-            if filename.endswith(".json"):
-                self.jfiles.append(filename)     
-
-        for obj in self.jfiles:
-            mc.textScrollList(self.s, e=True, append=obj)
-
-    #method for saving a pose
-    def savePose(self,*args):        
-        self.path= mc.textField(self.front, q=1, text=1)
-
-        self.name = mc.textField(self.nameInput, query=True, text=True)
-
-        if self.name =="Neutral" or self.name =="neutral":
-            self.name = '_Neutral'
-        
-        self.gender = self.crowdTarget()
-        
-
-        if self.path=="":
-            mc.confirmDialog( title='Select Root directory', message='Please select Root directory', button=['Ok'], defaultButton='Ok' )                          
-            return;
-        if self.gender=="":
-            mc.confirmDialog( title='Select Crowd Population', message='Please select crowd population', button=['Ok'], defaultButton='Ok' )                          
-            return;
-        else:
-            self.dir = self.path + self.gender
-        
-        if not os.path.exists(self.dir):
-            os.makedirs(self.dir)  
-                       
-        jnts = pm.ls(type="joint")
-        jnts = sorted(jnts)
-        
-        poseDict = OrderedDict()
-        
-        for jnt in jnts:
-            t = list(jnt.translate.get())
-            r = list(jnt.rotate.get())
-            s = list(jnt.scale.get())
-            poseDict[jnt.nodeName()]={'t':t, 'r':r, 's':s}    
-        try:
-            poseFilePath = self.dir + self.name +".json"
-            with open(poseFilePath, 'w')as p:
-                json.dump(poseDict, p, indent=4)
-        except:
-            print "gender"   
-    
+             
     #method for selecting the root directory where the FBXs will be located and
     #based on this directory, where the FBX outputs will be exported
     def txtPathBrowse(self,*args):   
         directory = mc.fileDialog2(caption="Set working directory", dialogStyle=1, fileMode=3 )
-        mc.textField(self.front, edit=1, it=directory[0])
+        mc.textField(self.front, edit=1, it=directory[0])      
+        self.setupFile()
         
+        
+    def setupFile(self,*args):
+        # Select an object if and only if it exists.
+        # Print a warning if it does not exist.
+        
+        self.path = mc.textField(self.front, q=1, text=1)
+               
+        #self.jsons  = self.path + self.gender
+        self.dir = self.path + '/Input/'
+        baseAgent = self.dir+"Female_Adult_01.fbx"
+        
+        if mc.objExists('f001_hipoly_81_bones_opacity_ncl1_1'):
+            print("Female mesh is in the scene")
+        else:
+            mc.file(baseAgent, i=True)
+            self.setupNeutralExpression()
+    
+    #method that refreshes the list of poses from the saved jsons files
+    def refreshList(self,*args):
+
+        self.path = mc.textField(self.front, q=1, text=1)
+               
+        #self.jsons  = self.path + self.gender
+        self.dir = self.path + '/SavedFacialExpressions/'
+        
+        mc.textScrollList(self.s, e=True, removeAll=True)
+        
+        del self.jfiles[:]
+        del self.expression_names[:]   
+        del self.jsonsFiles[:]          
+        
+        self.jsonsFiles = glob.glob(self.dir + '/*.json')           
+             
+        #load the json files again 
+        for filename in self.jsonsFiles:
+            if filename.endswith(".json"):
+                self.jfiles.append(filename)     
+        
+        fileExtension = ".json"
+        
+        for i in self.jfiles:
+            self.expression_names.append(os.path.splitext(os.path.basename(i))[0])
+       
+        for obj in self.expression_names:
+            mc.textScrollList(self.s, e=True, append=obj)
+
+    #method for saving a pose
+    def savePose(self,*args): 
+        self.path= mc.textField(self.front, q=1, text=1)
+
+        self.dir = self.path +'/SavedFacialExpressions/'
+               
+        if not os.path.exists(self.dir):
+            os.makedirs(self.dir)  
+
+        self.name = mc.textField(self.nameInput, query=True, text=True)
+
+        poseDict = OrderedDict()
+        neutralPoseDict = OrderedDict()
+
+        jnts = pm.ls(type="joint")
+        jnts = sorted(jnts)
+
+        if self.name =="":
+            mc.confirmDialog( title='Confirm', message='Facial expression name is empty', button=['Ok'], defaultButton='Ok')
+        else:         
+            for jnt in jnts:
+                t = list(jnt.translate.get())
+                r = list(jnt.rotate.get())
+                s = list(jnt.scale.get())
+                poseDict[jnt.nodeName()]={'t':t, 'r':r, 's':s}    
+            try:
+                poseFilePath = self.dir + self.name +".json"
+                with open(poseFilePath, 'w')as p:
+                    json.dump(poseDict, p, indent=4)
+            except:
+                print("Error saving joint data")  
+         
+    def setupNeutralExpression(self,*args):
+            self.path= mc.textField(self.front, q=1, text=1)          
+
+            self.name = '_Neutral.json'  
+
+            neutralFileExists = self.path + "/SavedFacialExpressions/"+self.name
+            
+            poseDict = OrderedDict()
+            neutralPoseDict = OrderedDict()
+
+            jnts = pm.ls(type="joint")
+            jnts = sorted(jnts)
+            
+            if os.path.isfile(neutralFileExists):
+                print('The neutral facial expression exists')
+            else:
+                print('The neutral facial expression is created')
+
+                for jnt in jnts:
+                    t = list(jnt.translate.get())
+                    r = list(jnt.rotate.get())
+                    s = list(jnt.scale.get())
+                    neutralPoseDict[jnt.nodeName()]={'t':t, 'r':r, 's':s}    
+                try:
+                    #neutralPoseFilePath = neutralFileExists
+                    with open(neutralFileExists, 'w')as p:
+                        json.dump(neutralPoseDict, p, indent=4)
+                except:
+                    print("Error saving joint data")   
+    
+    
+    
     def printItem(self, *args):
 
-        path = mc.textField(self.front, q=1, text=1)
+        self.path= mc.textField(self.front, q=1, text=1)
+
+        self.dir = self.path +'/SavedFacialExpressions/'
 
         item = mc.textScrollList( self.s, q=True, sii=True )
 
@@ -225,84 +260,75 @@ class HeadBox():
 
         index2 = index -1
         
-        self.gender = self.crowdTarget()
+        #self.gender = self.crowdTarget()
         
         try:  
-           poseFilePath = path + self.gender  
+           poseFilePath = self.dir 
         except:
             print "pose file path error"
         posePath = Path(poseFilePath) 
         poseJsons = [p for p in posePath.glob("*.json")]
         
         poseData = json.load(open(poseJsons[index2]))
-        for j,v in poseData.iteritems():
-            for c,vals in v.iteritems():
+        for j,v in poseData.items():
+            for c,vals in v.items():
                 j = pm.PyNode(j)
                 j.attr(c).set(vals)  
-                        
+                      
     #method for transferring the joints position from the jsons to all the characters
-    def massExpressions(self, *args):  
+    def massExpressions(self, *args):
         self.calculateDeltas()
-        self.transferExpressions()
+        self.transfer()
         
-    def transferExpressions(self):
-        self.fbxs = glob.glob(self.path+'/*.fbx')
+    def transfer(self):   
+        mc.file(f=True, new=True)    
+    
         #gender path
-        self.path = mc.textField(self.front, q=1, text=1)
-  
+        self.path = mc.textField(self.front, q=1, text=1)   
+        
+        self.fbxpath = self.path + "/RocketboxAgents/" 
+        
+        self.fbxs = glob.glob(self.path +'/RocketboxAgents/*.fbx')
+        
+        self.resultDeltaPath = self.path + "/DeltaValues/"
+         
         #list of json files 
-        self.jasonFiles = os.listdir(self.path + self.gender)
+        self.jasonFiles = os.listdir(self.path + "/SavedFacialExpressions/")
     
         for i in self.jasonFiles:
             if i.endswith(".json"):
                 self.jOutput.append(i)  
-  
-       
-        self.gender = self.crowdTarget()
-            
-        self.posePath = Path(self.path + self.gender)        
-        
-        self.exportDir = self.posePath + "/export/"
-        #####
-        self.deltaPath = self.path + self.gender
-
-        #directory where the delta files will be saved
-        self.resultDeltaPath = self.path+"/DeltaValues/"
-
-        #save neutral pose of each character (only one per group) to apply the delta later
-        self.neutralPoses = self.path+"/NeutralPose/"   
-
-
-        files = os.listdir(self.path)
+                
+        files = os.listdir(self.fbxpath)
         for filename in files:
             if filename.endswith(".fbx"):
+                print(filename)
                 self.fOutput.append(filename)  
 
-
-      
-        if not os.path.exists(self.neutralPoses):
-            os.makedirs(self.neutralPoses)  
- 
-
+        #AGENTS LEVEL. This collects all agents.
         for s in range(len(self.fbxs)):
             mc.file(self.fbxs[s], i=True, mergeNamespacesOnClash=True, namespace=':');
+            if mc.ls(type='joint')[0][0:5]== "Bip02":
+                self.renameJnts("Bip02","Bip01")              
+            
+            
             self.name = []
-
             self.neutral_pose_dict = OrderedDict()
             self.target_pose_dict= OrderedDict()
             self.resultDictionary = OrderedDict()
         
             self.blendshapes [:] = []  
-               
+            self.outputFile = self.path + "/Output/" +self.fOutput[s]
+            #selects all the joints
             self.joints = mc.ls(type='joint')
             mc.select(self.joints,hi=1)     
 
-
+            #select mesh
             self.name = mc.ls(type='mesh', dag=1, ni=1)
-            
-            self.outputFile = self.path + "/output/" +self.fOutput[s]
 
-            
+            self.joints = mc.ls(type='joint')
+            mc.select(self.joints,hi=1)           
+      
             for jnt in self.joints:
                     otx = mc.getAttr(jnt+'.tx')  
                     oty = mc.getAttr(jnt+'.ty')     
@@ -326,28 +352,15 @@ class HeadBox():
                     
                     self.neutral_pose_dict [jnt+".sx"] = osx
                     self.neutral_pose_dict [jnt+".sy"] = osy    
-                    self.neutral_pose_dict [jnt+".sz"] = osz  
-
-            self.finale_name = self.neutralPoses + self.name[0][0:2] +".json"
- 
-            if(os.path.isfile(self.finale_name)==False):
-                self.neutralPose = json.dumps(self.neutral_pose_dict, sort_keys=True, ensure_ascii = True, indent = 2) 
-                f= open(self.finale_name, 'w')
-                f.write(self.neutralPose)
-                f.close    
-                self.target_pose_dict.clear() 
-
-            self.neutralFE = open(self.finale_name) 
-            self.deltaVals = json.load(self.neutralFE)                                
-
+                    self.neutral_pose_dict [jnt+".sz"] = osz   
+  
             for i in range(0,len(self.jOutput)):   
 
                 f = open(self.resultDeltaPath+self.jOutput[i])
-
                 self.childVals = json.load(f) 
-                for key in self.deltaVals.keys():
-                    if key in self.deltaVals:
-                        newValue = self.childVals[key] + self.deltaVals[key] 
+                for key in self.neutral_pose_dict.keys():
+                    if key in self.neutral_pose_dict:
+                        newValue = self.childVals[key] + self.neutral_pose_dict[key] 
                         nameVal = key[5:]
                         name2 = self.joints[0] + nameVal
                         mc.setAttr(name2, newValue)                                 
@@ -356,9 +369,7 @@ class HeadBox():
                 #clean the json namespace     
                 self.blendshapes.append(self.jOutput[i][:-5])
                 mc.duplicate( name = self.jOutput[i][:-5] )            
-                mc.select(clear=True)                   
-                             
-                #setNeutralPose()  
+                mc.select(clear=True)   
                                          
             for i in self.blendshapes:
                 mc.select(i, add=True) 
@@ -370,17 +381,14 @@ class HeadBox():
                 except:
                     print ""                    
             mel.eval('FBXExport -f "%s" -s' % self.outputFile )                               
-            mc.file(f=True, new=True)    
-            
+            mc.file(f=True, new=True)  
+         
     def calculateDeltas(self):
         #gender path
         self.path = mc.textField(self.front, q=1, text=1)
 
         #####
-        self.deltaPath = self.path + self.gender
-
-        #directory where the delta files will be saved
-        self.resultDeltaPath = self.path+"/DeltaValues/"
+        self.resultDeltaPath = self.path + "/DeltaValues/"
 
         if not os.path.exists(self.resultDeltaPath):
             os.makedirs(self.resultDeltaPath)  
@@ -390,7 +398,7 @@ class HeadBox():
         self.target_pose_dict= OrderedDict()
         self.resultDictionary = OrderedDict()
 
-        self.gender = self.crowdTarget()  
+        #self.gender = self.crowdTarget()  
                    
         self.joints = mc.ls(type='joint')
         mc.select(self.joints,hi=1)     
@@ -420,12 +428,11 @@ class HeadBox():
                 self.neutral_pose_dict [jnt+".sy"] = osy    
                 self.neutral_pose_dict [jnt+".sz"] = osz  
 
-
         for i in range(len(self.jsonsFiles)):
             #print self.jsonsFiles[i][31:-5]
             self.poseData = json.load(open(self.jsonsFiles[i]))
-            for j,v in self.poseData.iteritems():
-                for c,vals in v.iteritems():
+            for j,v in self.poseData.items():
+                for c,vals in v.items():
                     j = pm.PyNode(j)
                     j.attr(c).set(vals)  
                     
@@ -455,8 +462,7 @@ class HeadBox():
                 
                 self.target_pose_dict [jnt+".sx"] = self.tsx
                 self.target_pose_dict [jnt+".sy"] = self.tsy    
-                self.target_pose_dict [jnt+".sz"] = self.tsz  
-                
+                self.target_pose_dict [jnt+".sz"] = self.tsz                
                 
             for key in self.neutral_pose_dict.keys():
                 if key in self.neutral_pose_dict:
@@ -473,25 +479,18 @@ class HeadBox():
             f.write(self.deltaExpression)
             f.close    
             self.target_pose_dict.clear()
+                       
   
-    def replaceJntsNames(self, inputFile):  
-        fin = open("Expression_delta/NeutralPose/"+inputFile+".json", "rt")
-        #read file contents to string
-        data = fin.read()
-        #replace all occurrences of the required string
-        data = data.replace('Bip02', 'Bip01')
-        #close the input file
-        fin.close()
-        #open the input file in write mode
-        fin = open("/Expression_delta/NeutralPose/"+inputFile+".json", "wt")
-        #overrite the input file with the resulting data
-        fin.write(data)
-        #close the file
-        fin.close()
-        
-        #self.replaceJntsNames("cf")
-        #self.replaceJntsNames("cm")   
-  
+    def renameJnts(self, oldName, newName):
+        newJoints = mc.ls(type='joint')
+        mc.select(newJoints,hi=1)  
+           
+        sel=pm.ls(selection=True)
+
+        for each in sel:
+            name=each.nodeName().replace(oldName, newName)
+            each.rename(name)
+            
 #class instatiation           
 hb = HeadBox()
 #executing the GUI method
