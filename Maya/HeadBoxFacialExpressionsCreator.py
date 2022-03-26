@@ -1,3 +1,10 @@
+
+## Headbox tool is designed to transfer blendshapes and facial expressions between 
+## the Microsoft Rocketbox avatars
+## Read more: https://github.com/openVRlab/Headbox
+## Creator Matias Volonte <volontematias@gmail.com>
+## Northeastern University & Clemenson University
+
 import maya.cmds as mc
 import os
 import json

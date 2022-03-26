@@ -9,10 +9,12 @@ And the Python script for Maya to create new blendshapes.
 
 https://www.youtube.com/watch?v=hgUGOjc6hOg
 
-This repo is part of 
+## Reference
+The following paper was published at IEEE VR 2022 to coincide with the release of this toolbox, and gives more details of the features included:
+
 Volonte M, Ofek E, Jakubzak K, Bruner S, and Gonzalez-Franco M (2022) HeadBox: A Facial Blendshape Animation Toolkit for the Microsoft Rocketbox Library. IEEE VR 2022
 
-Presented in the Open Access VR tools and libraries Workshop
+Presented in the Open Access VR tools and libraries Workshop. If you use this library for research or academic purposes, please also cite the aforementioned paper.
 
 This unity demo has dependencies from Openface and Oculus Lipsync therefore we can't provide any particular license and it has to be looked up to the original sources.
 
@@ -74,3 +76,22 @@ The mapping file is a json file where one can set a maximum on the threshold or 
 
 ## Creating new blendshapes
 You can use the Maya python script to move the bones on one avatar of the library and export the blendshape across all the other avatars.
+
+
+# Main Contributors
+
+Mar Gonzalez-Franco - Microsoft Research
+
+Eyal Ofek - Microsoft Research
+
+### MAYA tool and blendshapes
+Matias Volonte - Northeastern University & Clemenson University
+
+### Demo with HTC VIVE Facial Tracker and AR Kit compatibility
+Xueni Pan - Goldsmiths
+
+Fang Ma - Goldsmiths
+
+
+## Contributing
+This project welcomes contributions and suggestions. 
