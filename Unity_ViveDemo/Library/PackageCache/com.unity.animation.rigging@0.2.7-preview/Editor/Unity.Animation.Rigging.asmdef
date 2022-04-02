@@ -1,0 +1,10 @@
+{
+    "name": "Unity.Animation.Rigging.Editor",
+    "references": [
+      "Unity.Animation.Rigging"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

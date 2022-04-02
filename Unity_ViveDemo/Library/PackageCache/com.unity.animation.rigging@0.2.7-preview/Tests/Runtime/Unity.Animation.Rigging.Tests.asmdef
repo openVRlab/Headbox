@@ -1,0 +1,11 @@
+{
+    "name": "Unity.Animation.Rigging.Tests",
+    "references": [
+        "Unity.Animation.Rigging"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
