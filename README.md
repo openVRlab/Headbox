@@ -76,12 +76,11 @@ The mapping file is a json file where one can set a maximum on the threshold or 
 
 ### VIVE Unity Demo Project
 
-The Headbox Demo for VIVE is based on ****VIVE Eye and Facial Tracking SDK**** which is already imported in the “Unity Vive Demo” project, but to make it work you need to download and Install “SRanipal Runtime” from VIVE official website ([https://hub.vive.com/zh-CN/download](https://hub.vive.com/zh-CN/download)). You can download original SDK with API documents on this page too.
+The Headbox Demo for VIVE is based on ****VIVE Eye and Facial Tracking SDK**** which is already imported in the “Unity Vive Demo” project, but to make it work you need to download and Install “SRanipal Runtime” from VIVE official website ([https://hub.vive.com/en-US/download](https://hub.vive.com/en-US/download)). You can download original SDK with API documents on this page too.
 
 If the “Unity Vive Demo” project is reporting errors, it is most likely because you need to download SteamVR Plugin with your own Unity account, the Asset Store download link is [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647).
 
-In the LipMapping List in "SRanipal_AvatarLipSample_v2" script, the blendshape name and weight can be change.
-![BlendshapeWeight_VIVE](https://user-images.githubusercontent.com/102493490/161406837-58023224-969c-4f33-8d0e-8df510e89096.png)
+In the LipMapping List in "SRanipal_AvatarLipSample_v2" script, the blendshape name and weight can be change. More information about the VIVE demo please see this [document](https://docs.google.com/document/d/1IFbh_bGIYdqjO3KQBMRiIjPcwLiawmNOon-mJNB50lY/edit?usp=sharing).
 
 
 ## Creating new blendshapes
