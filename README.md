@@ -80,8 +80,12 @@ The Headbox Demo for VIVE is based on ****VIVE Eye and Facial Tracking SDK**** w
 
 If the “Unity Vive Demo” project is reporting errors, it is most likely because you need to download SteamVR Plugin with your own Unity account, the Asset Store download link is [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647).
 
-In the LipMapping List in "SRanipal_AvatarLipSample_v2" script, the blendshape name and weight can be change. More information about the VIVE demo please see this [document](https://docs.google.com/document/d/1IFbh_bGIYdqjO3KQBMRiIjPcwLiawmNOon-mJNB50lY/edit?usp=sharing).
+In the LipMapping List in "SRanipal_AvatarLipSample_v2" script, the blendshape name and weight can be change. 
 
+### ARKit Unity Demo Project
+The facial tracking in this demo is based on Apple Devices, please download "Face Capture" to iPhone or iPad from Apple Store which help to link the device to Unity sample project.
+
+More information about the VIVE and ARKit demo will update in this [document](https://docs.google.com/document/d/1IFbh_bGIYdqjO3KQBMRiIjPcwLiawmNOon-mJNB50lY/edit?usp=sharing).
 
 ## Creating new blendshapes
 You can use the Maya python script to move the bones on one avatar of the library and export the blendshape across all the other avatars.
