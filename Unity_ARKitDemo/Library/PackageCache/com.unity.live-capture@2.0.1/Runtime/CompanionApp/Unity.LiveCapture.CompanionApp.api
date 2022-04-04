@@ -1,0 +1,31 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.LiveCapture.CompanionApp
+{
+    public abstract class CompanionAppDevice<TClient> : Unity.LiveCapture.LiveCaptureDevice, Unity.LiveCapture.CompanionApp.ICompanionAppDevice where TClient : class, Unity.LiveCapture.CompanionApp.ICompanionAppClient
+    {
+        protected CompanionAppDevice() {}
+        public virtual void ClearClient();
+        protected virtual string GetAssetName();
+        public TClient GetClient();
+        public virtual bool IsReady();
+        public virtual bool IsRecording();
+        protected virtual void OnClientAssigned();
+        protected virtual void OnClientUnassigned();
+        protected virtual void OnDestroy();
+        protected virtual void OnDisable();
+        protected virtual void OnEnable();
+        protected virtual void OnRecordingChanged();
+        protected virtual void OnSlateChanged(Unity.LiveCapture.ISlate slate);
+        public void SetClient(TClient client, bool rememberAssignment);
+        public virtual void StartRecording();
+        public virtual void StopRecording();
+        public virtual void UpdateClient();
+    }
+
+    public interface ICompanionAppClient
+    {
+        public abstract string Name { get; }
+    }
+}
