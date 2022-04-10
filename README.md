@@ -76,16 +76,82 @@ The mapping file is a json file where one can set a maximum on the threshold or 
 
 ### VIVE Unity Demo Project
 
-The Headbox Demo for VIVE is based on ****VIVE Eye and Facial Tracking SDK**** which is already imported in the “Unity Vive Demo” project, but to make it work you need to download and Install “SRanipal Runtime” from VIVE official website ([https://hub.vive.com/en-US/download](https://hub.vive.com/en-US/download)). You can download original SDK with API documents on this page too.
+#### Get Started with VIVE
 
-If the “Unity Vive Demo” project is reporting errors, it is most likely because you need to download SteamVR Plugin with your own Unity account, the Asset Store download link is [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647).
+Before opening the Unity demo project, please set up your VIVE devices and Launch SRanipal Runtime first:
 
-In the LipMapping List in "SRanipal_AvatarLipSample_v2" script, the blendshape name and weight can be change. 
++ VIVE Pro Eye HMD and Lip Tracker Installation
+
+Set up the lighthouse base stations and headset like a normal VIVE Pro and make sure the lip tracker is plugged in the headset. A setup guide for VIVE Pro Eye HMD can be found here https://www.vive.com/us/setup/vive-pro-hmd/
+
++ Install and Run SRanipal Runtime
+
+SRanipal Runtime(SR_Runtime) can be downloaded from the VIVE developer portal. Launch SR_Runtime until the status icon appears in the notification tray. 
+
+There are 3 status modes for launched SR_Runtime：
+① Black: HMD does not support face tracking.   ② Orange: The face tracking device is in idle mode.   ③ Green: Face tracking is active.
+<p align="center">
+<img src="/Documentation/SRanipal Runtime Icon modes.png" alt="SRanipal Runtime Icon Modes" title="SRanipal Runtime Icon Modes"/>
+</p>
+
+#### Run Unity Demo
+
++ Steam VR Plugin
+
+This Demo’s VR setting is based on Steam VR, please make sure your Steam VR is working and  OpenVR Loader is selected in the project setting. Then, Steam VR should start automatically when you hit play.
+<p align="center">
+<img src="/Documentation/XR plugin setting.png" alt="VR Setting" title="VR Setting"/>
+</p>
+
+**Note**: If the project is reporting errors, it is most likely because you need to reimport Steam VR Plugin into your local Unity project via asset store https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647.
+
++ VIVE Eye and Facial Tracking SDK
+
+The “Vive-SRanipal-Unity-Plugin.unitypackage” in VIVE Eye and Facial Tracking SDK has been imported and modified in this demo project. 
+
+According to the blendshape document provided by VIVE, all the Microsoft Rocketbox Avatars include 42 blendshapes (SR_01 to SR_42). More information about supported blendshape and API can be found in VIVE official SDK, which can be downloaded from https://developer-express.vive.com/resources/vive-sense/eye-and-facial-tracking-sdk/.
+
++ Headbox_ViveDemo Sample Scene
+
+There are two main sample scripts (SRanipal_AvatarEyeSample_v2, SRanipal_AvatarLipSample_v2) that control the facial tracking in the sample scene. If you need to use other avatars rather than the sample avatar, you need to set the eye and lip tracking in these two components by following the next steps to assign eyes and lip blendshapes: 
+
+1) Add Constraints to Avatar
+You can find a prefab called “ConstraintsControl” and put them as a child game object under the avatar you used in the Hierarchy. 
+<p align="center">
+<img src="/Documentation/Constraint.png" alt="Constraint prefab" title="Constraint prefab"/>
+</p>
+2) Assign Eye Model Constraints
+Then, assign the “EyeModel_L_Constraint” and “EyeModel_R_Constraint” in the prefab to the eye sample script. 
+<p align="center">
+<img src="/Documentation/Eye Model.png" alt="CAssign Eye Model Constraints" title="Assign Eye Model Constraints"/>
+</p>
+3) Assign Eyes and Lip Blendshape
+The corresponding VIVE  blendShape would be automatically linked when assigning the avatar’s skinned mesh renderer to the eye and lip shape tables.
+<p align="center">
+<img src="/Documentation/Eye blendshape.png" alt="Assign Eyes Blendshape" title="Assign Eyes Blendshape"/>
+<img src="/Documentation/Lip blendshape.png" alt="Assign Lip Blendshape" title="Assign Lip Blendshape"/>
+</p>
+
+**Note**: The mapped avatar’s eye and lip blendshape can be changed with ‘avatarName’ and ‘headboxWeight’ value as below, if you need to use other avatars with different blendshape names.
+
+``` c#
+public class SRanipal_AvatarLipSample_v2 : MonoBehaviour
+{
+	public const string BLENDSHAPE_PREFIX = "blendShape1.";
+
+	//Change the headboxWeight below
+	public static List<LipMapping> LipMappings = new List<LipMapping> 
+            {
+		new LipMapping{viveName = LipShape_v2.Cheek_Puff_Left, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Puff_Left", headboxWeight = 1.0f},
+		new LipMapping{viveName = LipShape_v2.Cheek_Puff_Right, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Puff_Right",headboxWeight = 1.0f},
+		new LipMapping{viveName = LipShape_v2.Cheek_Suck, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Suck",headboxWeight = 0.5f}
+            }
+}
+
+```
 
 ### ARKit Unity Demo Project
 The facial tracking in this demo is based on Apple Devices, please download "Face Capture" to iPhone or iPad from Apple Store which help to link the device to Unity sample project.
-
-More information about the VIVE and ARKit demo will update in this [document](https://docs.google.com/document/d/1IFbh_bGIYdqjO3KQBMRiIjPcwLiawmNOon-mJNB50lY/edit?usp=sharing).
 
 ## Creating new blendshapes
 You can use the Maya python script to move the bones on one avatar of the library and export the blendshape across all the other avatars.
