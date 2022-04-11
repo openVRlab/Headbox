@@ -115,17 +115,19 @@ According to the blendshape document provided by VIVE, all the Microsoft Rocketb
 
 There are two main sample scripts (SRanipal_AvatarEyeSample_v2, SRanipal_AvatarLipSample_v2) that control the facial tracking in the sample scene. If you need to use other avatars rather than the sample avatar, you need to set the eye and lip tracking in these two components by following the next steps to assign eyes and lip blendshapes: 
 
-1) Add Constraints to Avatar
+1. Add Constraints to Avatar
 You can find a prefab called “ConstraintsControl” and put them as a child game object under the avatar you used in the Hierarchy. 
 <p align="center">
 <img src="/Documentation/Constraint.png" alt="Constraint prefab" title="Constraint prefab"/>
 </p>
-2) Assign Eye Model Constraints
+
+2. Assign Eye Model Constraints
 Then, assign the “EyeModel_L_Constraint” and “EyeModel_R_Constraint” in the prefab to the eye sample script. 
 <p align="center">
 <img src="/Documentation/Eye Model.png" alt="CAssign Eye Model Constraints" title="Assign Eye Model Constraints"/>
 </p>
-3) Assign Eyes and Lip Blendshape
+
+3. Assign Eyes and Lip Blendshape
 The corresponding VIVE  blendShape would be automatically linked when assigning the avatar’s skinned mesh renderer to the eye and lip shape tables.
 <p align="center">
 <img src="/Documentation/Eye blendshape.png" alt="Assign Eyes Blendshape" title="Assign Eyes Blendshape"/>
@@ -137,21 +139,47 @@ The corresponding VIVE  blendShape would be automatically linked when assigning 
 ``` c#
 public class SRanipal_AvatarLipSample_v2 : MonoBehaviour
 {
-	public const string BLENDSHAPE_PREFIX = "blendShape1.";
+	public const string BLENDSHAPE_PREFIX = "blendShape1.SR_";
 
 	//Change the headboxWeight below
 	public static List<LipMapping> LipMappings = new List<LipMapping> 
             {
-		new LipMapping{viveName = LipShape_v2.Cheek_Puff_Left, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Puff_Left", headboxWeight = 1.0f},
-		new LipMapping{viveName = LipShape_v2.Cheek_Puff_Right, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Puff_Right",headboxWeight = 1.0f},
-		new LipMapping{viveName = LipShape_v2.Cheek_Suck, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Suck",headboxWeight = 0.5f}
+		new LipMapping{viveName = LipShape_v2.Cheek_Puff_Left, avatarName = $"{BLENDSHAPE_PREFIX}01_Cheek_Puff_Left", headboxWeight = 1.0f},
+		new LipMapping{viveName = LipShape_v2.Cheek_Puff_Right, avatarName = $"{BLENDSHAPE_PREFIX}02_Cheek_Puff_Right",headboxWeight = 1.0f},
+		new LipMapping{viveName = LipShape_v2.Cheek_Suck, avatarName = $"{BLENDSHAPE_PREFIX}03_Cheek_Suck",headboxWeight = 0.5f}
             }
 }
 
 ```
 
 ### ARKit Unity Demo Project
-The facial tracking in this demo is based on Apple Devices, please download "Face Capture" to iPhone or iPad from Apple Store which help to link the device to Unity sample project.
+#### Get Started with VIVE
++ Live Capture 
+
+The facial tracking in this demo requires iPad or iPhone support, please install the "Unity Face Capture" application from Apple Store. The Unity Face Capture is part of the Live Capture package provided by Unity, you can find more information about the Live Capture package from https://docs.unity3d.com/Packages/com.unity.live-capture@1.0/manual/index.html.
+
++ Apple blendShapes
+
+Each avatar in Rocketbox Avatar Library includes 52 ARKit blendshape (AK_01 to AK_52), you can find more information about these blendshapes in Apple Developer Documentation here https://developer.apple.com/documentation/arkit/arfaceanchor/blendshapelocation. 
+
+#### Run Unity Demo
+
++ ARKit Face Actor and Face Mapper
+
+An ARKit Face Actor is assigned to the sample avatar as a component, and also to the "ARKit Face Device" component on FaceDevice in Hierarchy(Take Recorder/FaceDevice). 
+
+The Face Mapper can be created via Live Capture in the project. A sample Headbox Face Mapper is assigned to "ARKit Face Actor" component, which you can find in the folder “Assets/ARKit Sample/Face Capture/FaceMapper”. 
+
+<img src="/Documentation/ARkitDemo.png" alt="ARkit Demo with Connections and ARKit Face Actor" title="ARkit Demo"/>
+
++ Avatar Head Constraint
+
+A head Constraint prefab can be found in Assets, if you need to change to other avatars in Rocketbox, you need to add the Constraint prefab as avatar's child game object and assign it to Face Mapper's Head Rotation.
+
++ Live Capture Connection
+
+Once Live Capture set up correctly, open the Connection from “Window/Live Capture/Connection”, and make sure your iPhone/iPad is on the same Wifi as your computer. If it is the first time you used connection, you need to Create Server first. Then play the scene and at the same time, open Unity Face Capture, you will find you can both manually set the port and IP for servers to connect Unity projects, or choose automatically scan by the the Unity Face Capture on your iPhone/iPad. Then, you can control the facial tracking via Apple device and record animation through the Take Recorder in the Inspector.
+
 
 ## Creating new blendshapes
 You can use the Maya python script to move the bones on one avatar of the library and export the blendshape across all the other avatars.
