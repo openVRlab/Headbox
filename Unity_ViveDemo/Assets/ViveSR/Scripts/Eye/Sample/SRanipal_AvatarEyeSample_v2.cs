@@ -13,7 +13,7 @@ namespace ViveSR
         {
             public class SRanipal_AvatarEyeSample_v2 : MonoBehaviour
             {
-                
+
                 [SerializeField] private Transform[] EyesModels = new Transform[0];
                 [SerializeField] private List<EyeShapeTable_v2> EyeShapeTables;
                 /// <summary>
@@ -29,28 +29,30 @@ namespace ViveSR
                 /// </summary>
                 [SerializeField] private AnimationCurve EyebrowAnimationCurveHorizontal;
 
-                #region Headbox_LipMapping_blendshapes
-                
-                public const string BLENDSHAPE_EXPRESSION = "blendShape1.";
+                #region Headbox_LipMapping_blendshapes 
+                //Mapping Code Reference: https://www.youtube.com/watch?v=LOIOU2v3N3w
+
+                public const string BLENDSHAPE_EXPRESSION = "blendShape1.SR_";
 
                 public static List<EyeMapping> EyeMappings = new List<EyeMapping>
                 {
-        new EyeMapping{viveName = EyeShape_v2.Eye_Frown, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Frown" },//AU_04_BrowLowerer
-        new EyeMapping{viveName = EyeShape_v2.Eye_Left_Blink, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Left_Blink"},
-        new EyeMapping{viveName = EyeShape_v2.Eye_Left_Down, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Left_Down" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Left_Left, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Left_Left" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Left_Right, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Left_Right"},
-        new EyeMapping{viveName = EyeShape_v2.Eye_Left_Squeeze, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Squeeze_Left" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Left_Up, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Left_Up" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Left_Wide, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Left_Wide"},
-        new EyeMapping{viveName = EyeShape_v2.Eye_Right_Blink, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Right_Blink" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Right_Down, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Right_Down" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Right_Left, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Right_Left"},
-        new EyeMapping{viveName = EyeShape_v2.Eye_Right_Right, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Right_Right" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Right_Squeeze, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Squeeze_Right" },
-        new EyeMapping{viveName = EyeShape_v2.Eye_Right_Up, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Right_Up"},
-        new EyeMapping{viveName = EyeShape_v2.Eye_Right_Wide, avatarName = $"{BLENDSHAPE_EXPRESSION}Eye_Right_Wide" },
-        //new EyeMapping{viveName = EyeShape_v2.None, avatarName = $"None"}
+                 
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Frown, avatarName = $"{BLENDSHAPE_EXPRESSION}04_Eye_Frown", headboxWeight = 1.0f},//AU_04_BrowLowerer                  
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Left_Blink, avatarName = $"{BLENDSHAPE_EXPRESSION}05_Eye_Left_Blink", headboxWeight = 1.0f},                  
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Left_Down, avatarName = $"{BLENDSHAPE_EXPRESSION}06_Eye_Left_Down", headboxWeight = 1.0f},                   
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Left_Left, avatarName = $"{BLENDSHAPE_EXPRESSION}07_Eye_Left_Left", headboxWeight = 1.0f},                   
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Left_Right, avatarName = $"{BLENDSHAPE_EXPRESSION}08_Eye_Left_Right", headboxWeight = 1.0f},                   
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Left_Squeeze, avatarName = $"{BLENDSHAPE_EXPRESSION}09_Eye_Left_squeeze", headboxWeight = 1.0f},
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Left_Up, avatarName = $"{BLENDSHAPE_EXPRESSION}10_Eye_Left_Up", headboxWeight = 1.0f},        
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Left_Wide, avatarName = $"{BLENDSHAPE_EXPRESSION}11_Eye_Left_Wide", headboxWeight = 1.0f},      
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Right_Blink, avatarName = $"{BLENDSHAPE_EXPRESSION}12_Eye_Right_Blink", headboxWeight = 1.0f},      
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Right_Down, avatarName = $"{BLENDSHAPE_EXPRESSION}13_Eye_Right_Down", headboxWeight = 1.0f},      
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Right_Left, avatarName = $"{BLENDSHAPE_EXPRESSION}14_Eye_Right_Left", headboxWeight = 1.0f},      
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Right_Right, avatarName = $"{BLENDSHAPE_EXPRESSION}15_Eye_Right_Right", headboxWeight = 1.0f},      
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Right_Squeeze, avatarName = $"{BLENDSHAPE_EXPRESSION}16_Eye_Right_squeeze", headboxWeight = 1.0f},      
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Right_Up, avatarName = $"{BLENDSHAPE_EXPRESSION}17_Eye_Right_Up", headboxWeight = 1.0f},      
+                    new EyeMapping{viveName = EyeShape_v2.Eye_Right_Wide, avatarName = $"{BLENDSHAPE_EXPRESSION}18_Eye_Right_Wide", headboxWeight = 1.0f},       
+                    //new EyeMapping{viveName = EyeShape_v2.None, avatarName = $"None"}
 
                 };
                 //*/
@@ -67,15 +69,15 @@ namespace ViveSR
                 private static EyeData_v2 eyeData = new EyeData_v2();
                 private bool eye_callback_registered = false;
 
-                
-                
+
+
                 private void Start()
                 {
                     if (!SRanipal_Eye_Framework.Instance.EnableEye)
                     {
                         enabled = false;
                         return;
-                    }                   
+                    }
 
 
                     SetEyesModels(EyesModels[0], EyesModels[1]);
@@ -118,7 +120,7 @@ namespace ViveSR
                         bool isRightEyeAcitve = false;
                         if (SRanipal_Eye_Framework.Status == SRanipal_Eye_Framework.FrameworkStatus.WORKING)
                         {
-                            isLeftEyeActive = eyeData.no_user; 
+                            isLeftEyeActive = eyeData.no_user;
                             isRightEyeAcitve = eyeData.no_user;
                         }
                         else if (SRanipal_Eye_Framework.Status == SRanipal_Eye_Framework.FrameworkStatus.NOT_SUPPORT)
@@ -182,12 +184,12 @@ namespace ViveSR
                 {
                     if (leftEye != null && rightEye != null)
                     {
-                        EyesModels = new Transform[NUM_OF_EYES] { leftEye, rightEye };                      
+                        EyesModels = new Transform[NUM_OF_EYES] { leftEye, rightEye };
                         DestroyEyeAnchors();
                         CreateEyeAnchors();
                     }
                 }
-                              
+
 
                 public void SetEyeShapeTables(List<EyeShapeTable_v2> eyeShapeTables)
                 {
@@ -244,7 +246,7 @@ namespace ViveSR
                 {
                     for (int i = 0; i < EyesModels.Length; ++i)
                     {
-                        Vector3 target = EyeAnchors[i].transform.TransformPoint(gazeDirectionCombinedLocal);                                              
+                        Vector3 target = EyeAnchors[i].transform.TransformPoint(gazeDirectionCombinedLocal);
                         EyesModels[i].LookAt(target);
 
                     }
@@ -276,9 +278,9 @@ namespace ViveSR
                                     }
                                 }
                             }
-                            
 
-                        }                           
+
+                        }
                         else
                         {
                             AnimationCurve curve = EyebrowAnimationCurves[(int)eyeShape];
@@ -292,8 +294,8 @@ namespace ViveSR
                                 {
                                     if (headboxEyeMapped[j].headboxMappedIndex == i)
                                     {
-                                       
-                                        eyeShapeTable.skinnedMeshRenderer.SetBlendShapeWeight(i, curve.Evaluate(weighting[eyeShape]) * 100f *headboxEyeMapped[j].headboxWeight);
+
+                                        eyeShapeTable.skinnedMeshRenderer.SetBlendShapeWeight(i, curve.Evaluate(weighting[eyeShape]) * 100f * headboxEyeMapped[j].headboxWeight);
 
                                     }
 

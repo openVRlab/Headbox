@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7542b0a8b93c044618b3d84f58b4bc3c, type: 3}
   m_Name: HeadboxFaceMapper
   m_EditorClassIdentifier: 
-  m_RigPrefab: {fileID: 1376673140305030787, guid: 1eb74184d7eee82488bb03f4c9ef5406, type: 3}
+  m_RigPrefab: {fileID: 8862902908929969084, guid: ca073ebf667c67246a54bbfacfcc320a, type: 3}
   m_ShapeMatchTolerance: 0.6
   m_DefaultEvaluator: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
   m_InvertMappings: 0
@@ -20,576 +20,6 @@ MonoBehaviour:
   - m_Path: f002_hipoly_81_bones_opacity
     m_Bindings:
     - m_Location: 0
-      m_ShapeIndex: 0
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 1
-      m_ShapeIndex: 1
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 2
-      m_ShapeIndex: 2
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 3
-      m_ShapeIndex: 3
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 4
-      m_ShapeIndex: 4
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 5
-      m_ShapeIndex: 5
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 6
-      m_ShapeIndex: 6
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 7
-      m_ShapeIndex: 7
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 8
-      m_ShapeIndex: 8
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 9
-      m_ShapeIndex: 9
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 10
-      m_ShapeIndex: 10
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 11
-      m_ShapeIndex: 11
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 12
-      m_ShapeIndex: 12
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 13
-      m_ShapeIndex: 13
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 14
-      m_ShapeIndex: 14
-      m_Config:
-        m_OverrideSmoothing: 0
-        m_Smoothing: 0.1
-        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
-        m_Type: 0
-        m_SimpleEvaluator:
-          m_Multiplier: 100
-          m_Offset: 0
-          m_Max: 100
-          m_Clamping: 0
-        m_CurveEvaluator:
-          m_Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 1
-              value: 100
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-      m_IsExpanded: 1
-    - m_Location: 15
       m_ShapeIndex: 15
       m_Config:
         m_OverrideSmoothing: 0
@@ -627,7 +57,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 16
+    - m_Location: 1
       m_ShapeIndex: 16
       m_Config:
         m_OverrideSmoothing: 0
@@ -665,7 +95,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 17
+    - m_Location: 2
       m_ShapeIndex: 17
       m_Config:
         m_OverrideSmoothing: 0
@@ -703,7 +133,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 18
+    - m_Location: 3
       m_ShapeIndex: 18
       m_Config:
         m_OverrideSmoothing: 0
@@ -741,7 +171,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 19
+    - m_Location: 4
       m_ShapeIndex: 19
       m_Config:
         m_OverrideSmoothing: 0
@@ -779,7 +209,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 20
+    - m_Location: 5
       m_ShapeIndex: 20
       m_Config:
         m_OverrideSmoothing: 0
@@ -817,7 +247,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 21
+    - m_Location: 6
       m_ShapeIndex: 21
       m_Config:
         m_OverrideSmoothing: 0
@@ -855,7 +285,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 22
+    - m_Location: 7
       m_ShapeIndex: 22
       m_Config:
         m_OverrideSmoothing: 0
@@ -893,7 +323,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 23
+    - m_Location: 8
       m_ShapeIndex: 23
       m_Config:
         m_OverrideSmoothing: 0
@@ -931,7 +361,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 24
+    - m_Location: 9
       m_ShapeIndex: 24
       m_Config:
         m_OverrideSmoothing: 0
@@ -969,7 +399,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 25
+    - m_Location: 10
       m_ShapeIndex: 25
       m_Config:
         m_OverrideSmoothing: 0
@@ -1007,7 +437,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 26
+    - m_Location: 11
       m_ShapeIndex: 26
       m_Config:
         m_OverrideSmoothing: 0
@@ -1045,7 +475,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 27
+    - m_Location: 12
       m_ShapeIndex: 27
       m_Config:
         m_OverrideSmoothing: 0
@@ -1083,7 +513,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 28
+    - m_Location: 13
       m_ShapeIndex: 28
       m_Config:
         m_OverrideSmoothing: 0
@@ -1121,7 +551,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 29
+    - m_Location: 14
       m_ShapeIndex: 29
       m_Config:
         m_OverrideSmoothing: 0
@@ -1159,7 +589,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 30
+    - m_Location: 15
       m_ShapeIndex: 30
       m_Config:
         m_OverrideSmoothing: 0
@@ -1197,7 +627,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 31
+    - m_Location: 16
       m_ShapeIndex: 31
       m_Config:
         m_OverrideSmoothing: 0
@@ -1235,7 +665,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 32
+    - m_Location: 17
       m_ShapeIndex: 32
       m_Config:
         m_OverrideSmoothing: 0
@@ -1273,7 +703,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 33
+    - m_Location: 18
       m_ShapeIndex: 33
       m_Config:
         m_OverrideSmoothing: 0
@@ -1311,7 +741,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 34
+    - m_Location: 19
       m_ShapeIndex: 34
       m_Config:
         m_OverrideSmoothing: 0
@@ -1349,7 +779,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 35
+    - m_Location: 20
       m_ShapeIndex: 35
       m_Config:
         m_OverrideSmoothing: 0
@@ -1387,7 +817,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 36
+    - m_Location: 21
       m_ShapeIndex: 36
       m_Config:
         m_OverrideSmoothing: 0
@@ -1425,7 +855,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 37
+    - m_Location: 22
       m_ShapeIndex: 37
       m_Config:
         m_OverrideSmoothing: 0
@@ -1463,7 +893,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 38
+    - m_Location: 23
       m_ShapeIndex: 38
       m_Config:
         m_OverrideSmoothing: 0
@@ -1501,7 +931,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 39
+    - m_Location: 24
       m_ShapeIndex: 39
       m_Config:
         m_OverrideSmoothing: 0
@@ -1539,7 +969,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 40
+    - m_Location: 25
       m_ShapeIndex: 40
       m_Config:
         m_OverrideSmoothing: 0
@@ -1577,7 +1007,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 41
+    - m_Location: 26
       m_ShapeIndex: 41
       m_Config:
         m_OverrideSmoothing: 0
@@ -1615,7 +1045,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 42
+    - m_Location: 27
       m_ShapeIndex: 42
       m_Config:
         m_OverrideSmoothing: 0
@@ -1653,7 +1083,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 43
+    - m_Location: 28
       m_ShapeIndex: 43
       m_Config:
         m_OverrideSmoothing: 0
@@ -1691,7 +1121,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 44
+    - m_Location: 29
       m_ShapeIndex: 44
       m_Config:
         m_OverrideSmoothing: 0
@@ -1729,7 +1159,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 45
+    - m_Location: 30
       m_ShapeIndex: 45
       m_Config:
         m_OverrideSmoothing: 0
@@ -1767,7 +1197,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 46
+    - m_Location: 31
       m_ShapeIndex: 46
       m_Config:
         m_OverrideSmoothing: 0
@@ -1805,7 +1235,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 47
+    - m_Location: 32
       m_ShapeIndex: 47
       m_Config:
         m_OverrideSmoothing: 0
@@ -1843,7 +1273,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 48
+    - m_Location: 33
       m_ShapeIndex: 48
       m_Config:
         m_OverrideSmoothing: 0
@@ -1881,7 +1311,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 49
+    - m_Location: 34
       m_ShapeIndex: 49
       m_Config:
         m_OverrideSmoothing: 0
@@ -1919,7 +1349,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 50
+    - m_Location: 35
       m_ShapeIndex: 50
       m_Config:
         m_OverrideSmoothing: 0
@@ -1957,8 +1387,578 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
       m_IsExpanded: 1
-    - m_Location: 51
+    - m_Location: 36
       m_ShapeIndex: 51
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 37
+      m_ShapeIndex: 52
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 38
+      m_ShapeIndex: 53
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 39
+      m_ShapeIndex: 54
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 40
+      m_ShapeIndex: 55
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 41
+      m_ShapeIndex: 56
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 42
+      m_ShapeIndex: 57
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 43
+      m_ShapeIndex: 58
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 44
+      m_ShapeIndex: 59
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 45
+      m_ShapeIndex: 60
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 46
+      m_ShapeIndex: 61
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 47
+      m_ShapeIndex: 62
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 48
+      m_ShapeIndex: 63
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 49
+      m_ShapeIndex: 64
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 50
+      m_ShapeIndex: 65
+      m_Config:
+        m_OverrideSmoothing: 0
+        m_Smoothing: 0.1
+        m_EvaluatorPreset: {fileID: 11400000, guid: 23f316e41ee3e46af9c5d6fdc69047b1, type: 2}
+        m_Type: 0
+        m_SimpleEvaluator:
+          m_Multiplier: 100
+          m_Offset: 0
+          m_Max: 100
+          m_Clamping: 0
+        m_CurveEvaluator:
+          m_Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 100
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+      m_IsExpanded: 1
+    - m_Location: 51
+      m_ShapeIndex: 66
       m_Config:
         m_OverrideSmoothing: 0
         m_Smoothing: 0.1

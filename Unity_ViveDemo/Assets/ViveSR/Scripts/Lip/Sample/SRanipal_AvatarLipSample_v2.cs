@@ -12,42 +12,43 @@ namespace ViveSR
 			{
 				[SerializeField] private List<LipShapeTable_v2> LipShapeTables;
 
-				#region Headbox 42 blendshape Vive
+				#region Headbox 42 blendshape Vive 
+				//Mapping Code Reference: https://www.youtube.com/watch?v=LOIOU2v3N3w
 				//*
-				public const string BLENDSHAPE_PREFIX = "blendShape1.";
+				public const string BLENDSHAPE_PREFIX = "blendShape1.SR_";
 
 				//Change the headboxWeight below
 				public static List<LipMapping> LipMappings = new List<LipMapping> // See SRanipal_Lip_v2 Script (namespace Lip)
 				{
-					new LipMapping{viveName = LipShape_v2.Cheek_Puff_Left, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Puff_Left", headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Cheek_Puff_Right, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Puff_Right",headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Cheek_Suck, avatarName = $"{BLENDSHAPE_PREFIX}Cheek_Suck",headboxWeight = 1.0f},//SR_14_Cheek_Suck (Two similar blendshape)
-					new LipMapping{viveName = LipShape_v2.Mouth_Ape_Shape, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Ape_Shape",headboxWeight = 1.0f},//SR_01_Mouth_Ape_Shape (Two similar blendshape)
-					new LipMapping{viveName = LipShape_v2.Mouth_Lower_DownLeft, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Lower_DownLeft" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Lower_DownRight, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Lower_DownRight" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Inside, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Lower_Inside",headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Left, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Lower_Left",headboxWeight = 1.0f },
-					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Overlay, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Lower_Overlay",headboxWeight = 1.0f },
-					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Overturn, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Lower_Overturn",headboxWeight = 1.0f},//SR_03_Mouth_Lower_Overturn (Two similar blendshape)
-					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Right, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Lower_Right" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Sad_Left, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Sad_Left" ,headboxWeight = 1.0f},//SR_05_L_Mouth_Sad (Two similar blendshape)
-					new LipMapping{viveName = LipShape_v2.Mouth_Sad_Right, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Sad_Right",headboxWeight = 1.0f},//SR_05_R_Mouth_Sad (Two similar blendshape)
-					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Inside, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Upper_Inside",headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Left, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Upper_Left" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Overturn, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Upper_Overturn",headboxWeight = 1.0f },
-					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Right, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Upper_Right",headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Upper_UpLeft, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Upper_UpLeft" ,headboxWeight = 0.3f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Upper_UpRight, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Upper_UpRight",headboxWeight = 0.3f},
-					new LipMapping{viveName = LipShape_v2.Jaw_Forward, avatarName = $"{BLENDSHAPE_PREFIX}Jaw_Forward" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Jaw_Left, avatarName = $"{BLENDSHAPE_PREFIX}Jaw_Left",headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Jaw_Open, avatarName = $"{BLENDSHAPE_PREFIX}Jaw_Open" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Jaw_Right, avatarName = $"{BLENDSHAPE_PREFIX}Jaw_Right" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Pout, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Pout",headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Smile_Left, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Smile_Left",headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Mouth_Smile_Right, avatarName = $"{BLENDSHAPE_PREFIX}Mouth_Smile_Right" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Tongue_Down, avatarName = $"{BLENDSHAPE_PREFIX}Tongue_Down" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Tongue_LongStep1, avatarName = $"{BLENDSHAPE_PREFIX}Tongue_LongStep1" ,headboxWeight = 1.0f},
-					new LipMapping{viveName = LipShape_v2.Tongue_LongStep2, avatarName = $"{BLENDSHAPE_PREFIX}Tongue_LongStep2",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Cheek_Puff_Left, avatarName = $"{BLENDSHAPE_PREFIX}01_Cheek_Puff_Left", headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Cheek_Puff_Right, avatarName = $"{BLENDSHAPE_PREFIX}02_Cheek_Puff_Right",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Cheek_Suck, avatarName = $"{BLENDSHAPE_PREFIX}03_Cheek_Suck",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Ape_Shape, avatarName = $"{BLENDSHAPE_PREFIX}23_Mouth_Ape_Shape",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Lower_DownLeft, avatarName = $"{BLENDSHAPE_PREFIX}24_Mouth_Lower_DownLeft" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Lower_DownRight, avatarName = $"{BLENDSHAPE_PREFIX}25_Mouth_Lower_DownRight" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Inside, avatarName = $"{BLENDSHAPE_PREFIX}26_Mouth_Lower_Inside",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Left, avatarName = $"{BLENDSHAPE_PREFIX}27_Mouth_Lower_Left",headboxWeight = 1.0f },
+					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Overlay, avatarName = $"{BLENDSHAPE_PREFIX}28_Mouth_Lower_Overlay",headboxWeight = 1.0f },
+					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Overturn, avatarName = $"{BLENDSHAPE_PREFIX}29_Mouth_Lower_Overturn",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Lower_Right, avatarName = $"{BLENDSHAPE_PREFIX}30_Mouth_Lower_Right" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Sad_Left, avatarName = $"{BLENDSHAPE_PREFIX}32_Mouth_Sad_Left" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Sad_Right, avatarName = $"{BLENDSHAPE_PREFIX}33_Mouth_Sad_Right",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Inside, avatarName = $"{BLENDSHAPE_PREFIX}36_Mouth_Upper_Inside",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Left, avatarName = $"{BLENDSHAPE_PREFIX}37_Mouth_Upper_Left" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Overturn, avatarName = $"{BLENDSHAPE_PREFIX}38_Mouth_Upper_Overturn",headboxWeight = 1.0f },
+					new LipMapping{viveName = LipShape_v2.Mouth_Upper_Right, avatarName = $"{BLENDSHAPE_PREFIX}39_Mouth_Upper_Right",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Upper_UpLeft, avatarName = $"{BLENDSHAPE_PREFIX}40_Mouth_Upper_UpLeft" ,headboxWeight = 0.3f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Upper_UpRight, avatarName = $"{BLENDSHAPE_PREFIX}41_Mouth_Upper_UpRight",headboxWeight = 0.3f},
+					new LipMapping{viveName = LipShape_v2.Jaw_Forward, avatarName = $"{BLENDSHAPE_PREFIX}19_Jaw_Forward" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Jaw_Left, avatarName = $"{BLENDSHAPE_PREFIX}20_Jaw_Left",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Jaw_Open, avatarName = $"{BLENDSHAPE_PREFIX}21_Jaw_Open" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Jaw_Right, avatarName = $"{BLENDSHAPE_PREFIX}22_Jaw_Right" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Pout, avatarName = $"{BLENDSHAPE_PREFIX}31_Mouth_Pout",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Smile_Left, avatarName = $"{BLENDSHAPE_PREFIX}34_Mouth_Smile_Left",headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Mouth_Smile_Right, avatarName = $"{BLENDSHAPE_PREFIX}35_Mouth_Smile_Right" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Tongue_Down, avatarName = $"{BLENDSHAPE_PREFIX}" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Tongue_LongStep1, avatarName = $"{BLENDSHAPE_PREFIX}42_Tongue_LongStep1" ,headboxWeight = 1.0f},
+					new LipMapping{viveName = LipShape_v2.Tongue_LongStep2, avatarName = $"{BLENDSHAPE_PREFIX}",headboxWeight = 1.0f},
 					new LipMapping{viveName = LipShape_v2.Tongue_DownLeft_Morph, avatarName = $"{BLENDSHAPE_PREFIX}",headboxWeight = 1.0f},
 					new LipMapping{viveName = LipShape_v2.Tongue_DownRight_Morph, avatarName = $"{BLENDSHAPE_PREFIX}" ,headboxWeight = 1.0f},
 					new LipMapping{viveName = LipShape_v2.Tongue_Left, avatarName = $"{BLENDSHAPE_PREFIX}",headboxWeight = 1.0f},
