@@ -71,9 +71,10 @@ public class FaceAnimator : MonoBehaviour
             curFrameBlendshapeVals = new Dictionary<int, float>();
             // Deal with the timestamps, head + eye positions and rots, etc.
 
-            Vector3 headRot = new Vector3(frameData.d[3] * Mathf.Rad2Deg,
-                               frameData.d[4] * Mathf.Rad2Deg,
-                               frameData.d[5] * Mathf.Rad2Deg);
+            Vector3 headRot = new Vector3(frameData.d[3] * Mathf.Rad2Deg, // Represents Up/down in OpenFace
+                               frameData.d[4] * Mathf.Rad2Deg, // Turn
+                               frameData.d[5] * Mathf.Rad2Deg); // Tilt
+            // Convert world corrdinate of `headRot` into local one, using `head_bone`
             Vector3 headRotLocal = head_bone.transform.InverseTransformDirection(headRot);
             head_bone.transform.localRotation = Quaternion.Slerp(head_bone.transform.localRotation,
                 Quaternion.Euler(headRotLocal),
