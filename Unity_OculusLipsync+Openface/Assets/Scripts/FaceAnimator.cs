@@ -24,11 +24,6 @@ public class FaceAnimator : MonoBehaviour
 
     private AnimationDataFrame frameData;
 
-    private int maxSizeQueue = 10;
-    private Queue<AnimationDataFrame> actionUnitQueue = new Queue<AnimationDataFrame>(); // Store data for action unit 
-
-    private Calculator calc = new Calculator();
-    private float[] blendshapeMovingAverage;
     private bool hasNewDataUpdate = false;
     private bool hasNewBlendshapeVals  = false;
 
@@ -84,7 +79,6 @@ public class FaceAnimator : MonoBehaviour
             head_bone.transform.localRotation = Quaternion.Slerp(head_bone.transform.localRotation,
                 Quaternion.Euler(headRotLocal),
                 Time.deltaTime * headRotationSpeed);
-            
 
 
             foreach (var blend in overallBlendshapes)
@@ -96,14 +90,11 @@ public class FaceAnimator : MonoBehaviour
             for (int i = 12; i < frameData.d.Length; i++)
             {
                 var mapping = mappedBlendshapes[i - 12];
-                if (frameData.d[i] > 0 && blendshapeMovingAverage != null)
+                if (frameData.d[i] > 0)
                 {
                     foreach (var blendshape in mapping.weightedBlendshapes)
                     {
-                        float val;
-                        // val = ((frameData.d[i] / 5.0f) * 100f) * blendshape.weight;
-                        val = ((blendshapeMovingAverage[i] / 6.0f) * 100f) * blendshape.weight;
-                        // check if val is greater than predefined threshold
+                        float val = ((frameData.d[i] / 5.0f) * 100f) * blendshape.weight;
                         if (val >= mapping.threshold)
                         {
                             if (curFrameBlendshapeVals.ContainsKey(blendDictStringToInt[blendshape.targetBlendshape]))
@@ -119,6 +110,7 @@ public class FaceAnimator : MonoBehaviour
                         {
                             curFrameBlendshapeVals[blendDictStringToInt[blendshape.targetBlendshape]] = 0f;
                         }
+
                         if (!overallBlendshapes.Contains(blendDictStringToInt[blendshape.targetBlendshape]))
                         {
                             overallBlendshapes.Add(blendDictStringToInt[blendshape.targetBlendshape]);
@@ -126,21 +118,9 @@ public class FaceAnimator : MonoBehaviour
                     }
                 }
             }
+
             hasNewDataUpdate = false;
             hasNewBlendshapeVals = true;
-        }
-    }
-
-    private void UpdateActionUnitQueue(Queue<AnimationDataFrame> actionUnitQueue, int auNum)
-    {
-        // update blendshape average
-        actionUnitQueue.Enqueue(frameData); // incomingFrame
-        // check if data of queue is over 
-        if (actionUnitQueue.Count > maxSizeQueue)
-        {
-            AnimationDataFrame outgoingFrame = actionUnitQueue.Dequeue();
-            // calculate moving average to make avatar-movement smoothness
-			blendshapeMovingAverage = calc.CalcMovingAverage(actionUnitQueue, auNum);
         }
     }
 
@@ -167,7 +147,6 @@ public class FaceAnimator : MonoBehaviour
     public void OnDataUpdated(AnimationDataFrame lastDataSet)
     {
         frameData = lastDataSet;
-		UpdateActionUnitQueue(actionUnitQueue, frameData.d.Length);
         hasNewDataUpdate = true;
     }
 
@@ -245,8 +224,6 @@ public class FaceAnimator : MonoBehaviour
                 return from;
         }
     }
-    
-
 }
 
 [Serializable]
