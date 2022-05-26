@@ -1,10 +1,3 @@
-
-## Headbox tool is designed to transfer blendshapes and facial expressions between 
-## the Microsoft Rocketbox avatars
-## Read more: https://github.com/openVRlab/Headbox
-## Creator Matias Volonte <volontematias@gmail.com>
-## Northeastern University & Clemenson University
-
 import maya.cmds as mc
 import os
 import json
@@ -99,7 +92,6 @@ class HeadBox():
     
         mc.rowLayout(nc=4,cal=(4,'center'))
 
-
         mc.setParent('..')
    
         mc.separator(h=20)
@@ -116,7 +108,8 @@ class HeadBox():
     
         mc.separator(h=20)
         mc.setParent('..')
-    
+
+        mc.button(label='Create Deltas', command=self.massDeltas)    
         mc.button(label='Transfer Blendshapes', command=self.massExpressions)
     
         mc.separator(h=20)
@@ -282,9 +275,14 @@ class HeadBox():
                 j = pm.PyNode(j)
                 j.attr(c).set(vals)  
                       
+    
+   #method for creating the deltas
+    def massDeltas(self, *args):
+        self.calculateDeltas()
+   
+    
     #method for transferring the joints position from the jsons to all the characters
     def massExpressions(self, *args):
-        self.calculateDeltas()
         self.transfer()
         
     def transfer(self):   
