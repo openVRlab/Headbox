@@ -1,6 +1,6 @@
 # Headbox
 
-HeadBox is a series of opensource tools to do facial animation on the Microsoft Rocketbox avatar library (available here https://github.com/microsoft/Microsoft-Rocketbox). It includes a tool to create blendshapes out of the facial bones inside Maya and transfer the new blendshapes to the other avatars in the library. We have created a total of 15 visemes, 48 FACS, 30 for the Vive facial tracker. These blendshapes have been released with the original library. An additional Unity demo shows the use these tools with Openface and Oculus Lipsync.
+HeadBox is a series of opensource tools to do facial animation on the Microsoft Rocketbox avatar library (available here https://github.com/microsoft/Microsoft-Rocketbox). It includes a tool to create blendshapes out of the facial bones inside Maya and transfer the new blendshapes to the other avatars in the library. We have created a total of 15 visemes, 48 FACS, 30 for the Vive facial tracker and 52 ARKit blendshapes. These blendshapes have been released with the original library. An additional Unity demo shows the use these tools with Openface and Oculus Lipsync.
 
 In this repo you will find a Unity Demo of the Headbox tool for blendshape creation to do facial animation on the Microsoft Rocketbox.
 And the Python script for Maya to create new blendshapes.
