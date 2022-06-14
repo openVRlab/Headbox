@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=hgUGOjc6hOg
 ## Reference
 The following paper was published at IEEE VR 2022 to coincide with the release of this toolbox, and gives more details of the features included:
 
-Volonte M, Ofek E, Jakubzak K, Bruner S, and Gonzalez-Franco M (2022) (HeadBox: A Facial Blendshape Animation Toolkit for the Microsoft Rocketbox Library)[https://www.microsoft.com/en-us/research/publication/headbox-a-facial-blendshape-animation-toolkit-for-the-microsoft-rocketbox-library/]. IEEE VR 2022
+Volonte M, Ofek E, Jakubzak K, Bruner S, and Gonzalez-Franco M (2022) [HeadBox: A Facial Blendshape Animation Toolkit for the Microsoft Rocketbox Library](https://www.microsoft.com/en-us/research/publication/headbox-a-facial-blendshape-animation-toolkit-for-the-microsoft-rocketbox-library/). IEEE VR 2022
 
 Presented in the Open Access VR tools and libraries Workshop. If you use this library for research or academic purposes, please also cite the aforementioned paper.
 
