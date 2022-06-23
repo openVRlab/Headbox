@@ -1,0 +1,76 @@
+{
+  "ExternalFunctions": [
+    {
+      "Name": "UnityEngine.Animations.AnimationStreamHandleUtility::ReadStreamFloatsInternal",
+      "FullName": "UnityEngine.Animations.AnimationStreamHandleUtility.ReadStreamFloatsInternal(ref UnityEngine.Animations.AnimationStream stream, void* propertyStreamHandles, void* floatBuffer, int count)_2B882EFC6D6DA538"
+    },
+    {
+      "Name": "UnityEngine.Quaternion::Lerp_Injected",
+      "FullName": "UnityEngine.Quaternion.Lerp_Injected(ref UnityEngine.Quaternion a, ref UnityEngine.Quaternion b, float t, ref UnityEngine.Quaternion ret)_5B1A79BEA0B9833A"
+    },
+    {
+      "Name": "UnityEngine.Quaternion::Inverse_Injected",
+      "FullName": "UnityEngine.Quaternion.Inverse_Injected(ref UnityEngine.Quaternion rotation, ref UnityEngine.Quaternion ret)_3655AD12085447F1"
+    },
+    {
+      "Name": "UnityEngine.Quaternion::Internal_ToEulerRad_Injected",
+      "FullName": "UnityEngine.Quaternion.Internal_ToEulerRad_Injected(ref UnityEngine.Quaternion rotation, ref UnityEngine.Vector3 ret)_322F618EADAECCF7"
+    },
+    {
+      "Name": "UnityEngine.Quaternion::Internal_FromEulerRad_Injected",
+      "FullName": "UnityEngine.Quaternion.Internal_FromEulerRad_Injected(ref UnityEngine.Vector3 euler, ref UnityEngine.Quaternion ret)_24C74F722F6D0C35"
+    },
+    {
+      "Name": "UnityEngine.Animations.PropertyStreamHandle::GetFloatInternal_Injected",
+      "FullName": "UnityEngine.Animations.PropertyStreamHandle.GetFloatInternal_Injected(ref UnityEngine.Animations.PropertyStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream)_3FC22E811472C059"
+    },
+    {
+      "Name": "Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle::CheckReadAndThrowNoEarlyOut_Injected",
+      "FullName": "Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle.CheckReadAndThrowNoEarlyOut_Injected(ref Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle handle)_5D0EA054F9B3B77F"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformStreamHandle::GetRotationInternal_Injected",
+      "FullName": "UnityEngine.Animations.TransformStreamHandle.GetRotationInternal_Injected(ref UnityEngine.Animations.TransformStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream, ref UnityEngine.Quaternion ret)_E1EDB0C03CEF19B9"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformSceneHandle::HasValidTransform_Injected",
+      "FullName": "UnityEngine.Animations.TransformSceneHandle.HasValidTransform_Injected(ref UnityEngine.Animations.TransformSceneHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream)_E699BAF5C31CA022"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformSceneHandle::GetRotationInternal_Injected",
+      "FullName": "UnityEngine.Animations.TransformSceneHandle.GetRotationInternal_Injected(ref UnityEngine.Animations.TransformSceneHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream, ref UnityEngine.Quaternion ret)_021546B39140036A"
+    },
+    {
+      "Name": "Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle::CheckWriteAndThrowNoEarlyOut_Injected",
+      "FullName": "Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle.CheckWriteAndThrowNoEarlyOut_Injected(ref Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle handle)_BBB3C78A1E995A27"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformStreamHandle::GetLocalRotationInternal_Injected",
+      "FullName": "UnityEngine.Animations.TransformStreamHandle.GetLocalRotationInternal_Injected(ref UnityEngine.Animations.TransformStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream, ref UnityEngine.Quaternion ret)_276FF2FDEFDD364E"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformStreamHandle::SetLocalRotationInternal_Injected",
+      "FullName": "UnityEngine.Animations.TransformStreamHandle.SetLocalRotationInternal_Injected(ref UnityEngine.Animations.TransformStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream, ref UnityEngine.Quaternion rotation)_BB7FF0FC68B881F3"
+    },
+    {
+      "Name": "UnityEngine.Animations.PropertyStreamHandle::ResolveInternal_Injected",
+      "FullName": "UnityEngine.Animations.PropertyStreamHandle.ResolveInternal_Injected(ref UnityEngine.Animations.PropertyStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream)_4BADF4AA4EEC1D33"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformStreamHandle::GetLocalTRSInternal_Injected",
+      "FullName": "UnityEngine.Animations.TransformStreamHandle.GetLocalTRSInternal_Injected(ref UnityEngine.Animations.TransformStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream, ref UnityEngine.Vector3 position, ref UnityEngine.Quaternion rotation, ref UnityEngine.Vector3 scale)_17DC938F59596FB4"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformStreamHandle::SetLocalTRSInternal_Injected",
+      "FullName": "UnityEngine.Animations.TransformStreamHandle.SetLocalTRSInternal_Injected(ref UnityEngine.Animations.TransformStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream, ref UnityEngine.Vector3 position, ref UnityEngine.Quaternion rotation, ref UnityEngine.Vector3 scale, bool useMask)_433C8E86F33CD5D7"
+    },
+    {
+      "Name": "UnityEngine.Animations.TransformStreamHandle::ResolveInternal_Injected",
+      "FullName": "UnityEngine.Animations.TransformStreamHandle.ResolveInternal_Injected(ref UnityEngine.Animations.TransformStreamHandle _unity_self, ref UnityEngine.Animations.AnimationStream stream)_1D71F68B7C64F15A"
+    },
+    {
+      "Name": "burst_abort",
+      "FullName": "unused.burst_abort(System.String errorId, System.String message)_C2EC9A829AFAD7DD"
+    }
+  ]
+}
