@@ -26,7 +26,7 @@ Openface is only included as a release (no source code) with a direct output via
 Original Project and Source Code:
 https://github.com/TadasBaltrusaitis/OpenFace
 
-<!--- There are two files from openface training that are too big for github
+ There are two files from openface training that are too big for github
 
 *cen_patches_0.50_of.dat
 *cen_patches_1.00_of.dat
@@ -37,7 +37,7 @@ wget https://www.dropbox.com/sh/o8g1530jle17spa/AACdS_lkcAhwDghZVq3MgMcza/cen_pa
 wget https://www.dropbox.com/sh/o8g1530jle17spa/AABis9pvPp-cKI10u6McOL8-a/cen_patches_1.00_of.dat
 
 and place them in OpenFaceRelease\Release\model\patch_experts
- ---> 
+
 
 Openface license states: ACADEMIC OR NON-PROFIT ORGANIZATION NONCOMMERCIAL RESEARCH USE ONLY
 Please check the license in the repo for more details on usage.
