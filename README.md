@@ -5,7 +5,6 @@ HeadBox is a series of opensource tools to do facial animation on the Microsoft 
 In this repo you will find a Unity Demo of the Headbox tool for blendshape creation to do facial animation on the Microsoft Rocketbox.
 And the Python script for Maya to create new blendshapes.
 
-
 <img src="/Documentation/F96C911C-D2D8-49B1-BCB8-45C582CFD945.jpeg" alt="Headbox Scheme" title="Headbox Tools"/>
 
 https://www.youtube.com/watch?v=hgUGOjc6hOg
